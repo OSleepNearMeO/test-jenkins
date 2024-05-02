@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Build') { 
+            agent {
+                docker { image 'node:20-alpine' }
+            }
             steps {
                 sh 'npm install' 
                 sh 'docker build . -t "test-jenkins-fe"'
