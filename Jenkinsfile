@@ -6,9 +6,8 @@ pipeline {
                 docker { image 'node:20-alpine' }
             }
             steps {
-                sh 'npm install' 
-                sh 'docker build . -t "test-jenkins-fe"'
-                sh 'docker run -d -p 9999:9999 test-jenkins-fe'
+                sh 'node --version'
+                echo 'create fontend finish'
             }
         }
     }
