@@ -6,6 +6,8 @@ function App() {
   return (
     <>
       hello react this is {productMode}
+
+      test trigger git
     </>
   )
 }
